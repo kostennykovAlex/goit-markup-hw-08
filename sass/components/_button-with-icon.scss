@@ -1,0 +1,20 @@
+.footer__button {
+	@extend %button;
+	display: inline-flex;
+	text-align: center;
+	align-items: center;
+	
+
+    &:hover,
+    &:focus {
+	background-color: $basicWhiteColor;
+	color: $accentColor;
+}
+}
+
+.footer__submit {
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+	fill: currentColor;
+}

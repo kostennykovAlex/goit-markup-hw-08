@@ -1,0 +1,90 @@
+/* ===================Our team==================== */
+.our-team {
+	background: var(--secondary-bg-color);
+		
+	& img {
+	display: block;
+	}
+
+	&__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+	&__information {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+	&__name {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-family: Roboto;
+	font-style: 400;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.187;
+
+	/* identical to box height */
+	text-align: center;
+
+	color: var(--primary-title-color);
+}
+
+	&__profession {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.187;
+	margin-top: 0;
+	margin-bottom: 16px;
+	/* identical to box height */
+	text-align: center;
+
+	color: var(--primary-text-color);
+}
+
+	&__icon {
+	fill: currentColor;
+}
+
+	&__list {
+	display: flex;
+	justify-content: center;
+	border-radius: 50%;
+	}
+
+	&__social {
+	margin-right: 10px;
+}
+
+	&__social:nth-child(4n) {
+	margin-right: 0;
+}
+}
+
+.our-team__item:not(:nth-child(4n)) {
+	margin-right: 30px;
+}
+
+.our-team__item {
+	width: calc((100% - 30px * 3) / 4);
+	border-radius: 0px 0px 4px 4px;;
+	background: var(--primary-white-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.team-social__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.team-social__item {
+	margin-right: 10px;
+
+	&:nth-child(4n) {
+	margin-right: 0;
+}
+}

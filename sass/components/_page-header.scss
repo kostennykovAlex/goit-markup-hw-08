@@ -1,0 +1,43 @@
+.header {
+	border-bottom: 1px solid #ececec;
+}
+
+/* =====================Nav-Header===================== */
+
+
+.site-nav {
+	display: flex;
+	align-items: center;
+	
+	&__list {
+	display: flex;
+	}
+	
+ 
+    &__link {
+	display: block;
+	padding-top: 32px;
+ 	padding-bottom: 32px;
+	margin-bottom: 0;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.142;
+	letter-spacing: 0.02em;
+
+	color: var(--primary-title-color);
+	transition: var(--transorm-color);
+	animation-duration: 1000ms;
+	animation-iteration-count: 1;
+}
+
+
+    &__item:not(:last-child) {
+	margin-right: 50px;
+}
+
+    &__link:hover,
+    &__link:focus {
+	color: var(--accent-color);
+	cursor: pointer;
+}
+}

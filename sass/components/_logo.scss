@@ -1,0 +1,26 @@
+.site-nav__logo {
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.192;
+	margin-right: 93px;
+	/* outline: 1px solid green; */
+
+	/* identical to box height */
+	text-decoration: none;
+	color: var(--primary-black-color);
+	/* shadow btn */
+	animation-duration: 1000ms;
+	animation-iteration-count: 1;
+	transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    &:hover {
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &--accent {
+	color: var(--accent-color);
+   }
+}
