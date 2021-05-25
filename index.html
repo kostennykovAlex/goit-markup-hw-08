@@ -17,25 +17,26 @@
 	<body>
 		<!---================== Header ==================--->
 		<header class="header">
-			<div class="container">
-				<nav class="site-nav">
-					<a href="index.html" class="site-nav__logo">
-						<span class="site-nav__logo--accent">Web</span>
-						Studio
-					</a>
-					<!---==================Info ==================--->
-					<ul class="site-nav__list list">
-						<li class="site-nav__item">
-							<a href="index.html" class="site-nav__link--current link">Студия</a>
-						</li>
-						<li class="site-nav__item">
-							<a href="portfolio.html" class="site-nav__link link">Портфолио</a>
-						</li>
-						<li class="site-nav__item">
-							<a href="/" aria-label="Контакты" class="site-nav__link link">Контакты</a>
-						</li>
-					</ul>
-
+			<div class="container flexbox">
+				<a href="index.html" class="site-nav__logo no-margin-bottom">
+					<span class="site-nav__logo--accent">Web</span>
+					Studio
+				</a>
+				<!---==================Info ==================--->
+				<div id="mobile-menu-block" class="mobile-menu-block flexbox" data-menu>
+					<nav class="site-nav">
+						<ul class="site-nav__list list">
+							<li class="site-nav__item">
+								<a href="index.html" class="site-nav__link--current link">Студия</a>
+							</li>
+							<li class="site-nav__item">
+								<a href="portfolio.html" class="site-nav__link link">Портфолио</a>
+							</li>
+							<li class="site-nav__item">
+								<a href="/" aria-label="Контакты" class="site-nav__link link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
 					<!---================== Contact ==================--->
 					<ul class="address__list list">
 						<li class="address__item">
@@ -56,7 +57,19 @@
 							</a>
 						</li>
 					</ul>
-				</nav>
+				</div>
+				<button
+					type="submit"
+					class="mobile-menu-button"
+					data-menu-button
+					aria-controls="mobile-menu-block"
+					aria-expanded="false"
+				>
+					<svg width="40" height="40" aria-label="Переключатель мобильного меню">
+						<use class="icon-menu-burger" href="./img/iconmoon/sprite.svg#icon-menu_40px"></use>
+						<use class="icon-menu-close" href="./img/iconmoon/sprite.svg#icon-close_40px"></use>
+					</svg>
+				</button>
 			</div>
 		</header>
 
@@ -596,5 +609,6 @@
 				})
 			})()
 		</script>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>

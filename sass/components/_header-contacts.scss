@@ -1,7 +1,9 @@
 .address {
-
+	
 	&__list {
-	display: flex;
+	@media screen and (min-width: 1200px) {
+		display: flex;
+	}
 	margin-left: auto;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -9,19 +11,22 @@
 	}
      
 	&__link {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	padding-top: 32px;
-	padding-bottom: 32px;
+		
+	@media screen and (max-width: 767px) {
+		@include fontBasicStyles(18px, 1.16, 500, 0.02em);
+	}
 
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.142;
-	letter-spacing: 0.02em;
-	/* outline: 1px solid rgb(74, 165, 0); */
+	@media screen and (min-width: 768px) {
+		@include fontBasicStyles(12px, 1.16, 500, 0.02em);
+	}
+
+	@media screen and (min-width: 1200px) {
+		@include fontBasicStyles(14px, 1.14, 500, 0.02em);
+		display: inline-flex;
+		align-items: center;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
 	text-decoration: none;
 	color: var(--primary-text-color);
 	transition: var(--transorm-color);
@@ -32,8 +37,24 @@
 	margin-right: 10px;
 }
 
+	&__item {
+		@media screen and (max-width: 767px) {
+		text-align: center;
+	}
+	}
+
     &__item:not(:last-child) {
-	margin-right: 50px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 16px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		margin-bottom: 10px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 50px;
+	}
 }
 
     &__link:hover,
