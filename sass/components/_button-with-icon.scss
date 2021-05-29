@@ -3,7 +3,13 @@
 	display: inline-flex;
 	text-align: center;
 	align-items: center;
-	
+	transition: $primaryTransitionColBg;
+	cursor: pointer;
+
+	color: $basicWhiteColor;
+
+	transition-property: background-color, top, box-shadow;
+  	transition-duration: 250ms;
 
     &:hover,
     &:focus {

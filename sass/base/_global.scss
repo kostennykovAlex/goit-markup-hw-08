@@ -2,17 +2,17 @@ html {
 	box-sizing: border-box;
 }
 
-* {
-	&::before,
-	&::after {
-		box-sizing: inherit;
+*,
+*::before,
+*::after  {
+		box-sizing: border-box;
+		outline: 1px solid green;
 	}
 
-	&:focus {
+*:focus {
 		outline-color: $accentColor;
 		outline-offset: 2px;
 		outline-style: solid;
-	}
 }
 
 body {
@@ -28,8 +28,18 @@ img {
 }
 
 .title {
+
+	@media screen and (min-width:1200px) {
+		margin-bottom: 50px;
+	}
+
+	
+    @media screen and (max-width: 1199px) {
+      font-size: 26px;
+      line-height: 1.67;
+    }
+	margin-bottom: 30px;
 	margin-top: 0;
-	margin-bottom: 50px;
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.167;

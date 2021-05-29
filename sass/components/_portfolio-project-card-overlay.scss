@@ -1,12 +1,24 @@
 /* ====================Portfolio-projects==================== */
 
-.portfolio{
+.portfolio {
 	padding-top: 94px;
 	padding-bottom: 94px;
 	
 	&__list {
-	display: flex;
-	flex-wrap: wrap;
+		@media screen and (min-width: $tablet) {
+			margin-bottom: 30px;
+			
+		}
+		@media screen and (min-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -15px;
+		}
+		@media screen and (min-width: $desktop) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 25px;
+	}
 }
 
 	&__box {
@@ -20,12 +32,7 @@
 	border-left: 1px solid #eeeeee;
 }
 
-	&__list img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	/* outline: 1px solid green; */
-}
+	
 
 /* ====================Portfolio-project-information==================== */
 

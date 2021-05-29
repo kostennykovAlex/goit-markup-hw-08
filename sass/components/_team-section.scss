@@ -1,14 +1,16 @@
 /* ===================Our team==================== */
 .our-team {
 	background: var(--secondary-bg-color);
-		
-	& img {
-	display: block;
-	}
 
 	&__list {
-	display: flex;
-	flex-wrap: wrap;
+		@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		margin: -15px;
+	}
 }
 
 	&__information {
@@ -46,13 +48,7 @@
 	&__icon {
 	fill: currentColor;
 }
-
-	&__list {
-	display: flex;
-	justify-content: center;
-	border-radius: 50%;
-	}
-
+	
 	&__social {
 	margin-right: 10px;
 }
@@ -60,19 +56,33 @@
 	&__social:nth-child(4n) {
 	margin-right: 0;
 }
-}
 
-.our-team__item:not(:nth-child(4n)) {
-	margin-right: 30px;
-}
-
-.our-team__item {
-	width: calc((100% - 30px * 3) / 4);
+	&__item {
+	text-align: center;
 	border-radius: 0px 0px 4px 4px;;
 	background: var(--primary-white-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
 
+	@media screen and (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		width: calc((100% - 30px * 2) / 2);
+		margin: 15px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: calc((100% - 30px * 3) / 4);
+
+		&:not(:nth-child(4n)) {
+			margin-right: 30px;
+		}
+	}
+}
+}
 
 .team-social__list {
 	display: flex;

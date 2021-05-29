@@ -1,8 +1,10 @@
 
 
-.footer-flexbox {
-	display: flex;
-	align-items: baseline
+.flexbox {
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		align-items: baseline;
+	}
 }
 
 .footer {
@@ -10,15 +12,43 @@
 	padding-bottom: 60px;
 	background-color: var(--footer-bg-color);
 
-	&__block{
-	margin-right: 70px;
+	&__flexbox.box {
+
+		@media screen and (min-width: 768px) {
+		display: flex;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		justify-content: space-around;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: calc((100% - 30px) / 2);
+		justify-content: space-between;
+		align-items: baseline;
+	}
 }
 
-    &__join {
-	margin-right: 95px;
-}
+
+
+	&__block,&__join {
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: calc((100% - 30px) / 2);
+	}
+	}
 
 	&__logo {
+		@media screen and (min-width: 480px) {
+			margin-right: 0;
+		}
+		@media screen and (min-width: 768px) {
+			margin-right: 0;
+		}
+		
 	display: block;
 	font-family: Raleway;
 	font-style: normal;
@@ -64,6 +94,9 @@
 }
 
 	&__action {
+		@media screen and (max-width: 1199px) {
+			display: block;
+		}
 	display: inline-block;
 	font-weight: 700;
 	font-size: 14px;
@@ -81,6 +114,9 @@
 }
 
 	&__social {
+	@media screen and (max-width: 767px) {
+		justify-content: center;
+	}
 	display: flex;
 }
 
@@ -105,10 +141,23 @@
 	
 	&__icon {
 	fill: currentColor;
-	
+}
+
+	&__form {
+		@media screen and (min-width:1200px){
+			width: calc((100% - 30px) / 2);
+			margin-left: auto;
+		}
+		
+		@media screen and (max-width: 1199px){
+			text-align: center;
+		}
 }
 
 	&__js--form {
+	@media screen and (max-width: 1199px) {
+	display: block;
+	}
 	display: flex;
 }
 }

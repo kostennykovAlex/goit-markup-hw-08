@@ -2,7 +2,6 @@
 	display: block;
 	@media screen and (max-width: 1199px) {
 		padding: 16px 0;
-		@include fontBasicStyles(24px, 1.16, 700);
 	}
 
 	@media screen and (min-width: 768px) {
@@ -15,10 +14,6 @@
 		&.no-margin-bottom {
 			margin-bottom: 0;
 		}
-	}
-	  &.no-padding {
-	padding: 0;
-	margin-bottom: 20px;
 	}
 	font-family: Raleway;
 	font-style: normal;
@@ -43,7 +38,4 @@
     &--accent {
 	color: var(--accent-color);
    }
-
- 
 }
-

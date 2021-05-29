@@ -5,13 +5,30 @@
 	padding-bottom: 94px;
 	
 	&__list {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 34px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 25px;
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 30px;
+			display: flex;
+			justify-content: center;
+		}
+
+		@media screen and (min-width: 1200px) {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 34px;
+		}
+	
 }
 
 
 	&__button {
+		@media screen and (max-width:767px) {
+		border-radius: 4px;	
+		}
+
 	padding-top: 6px;
 	padding-right: 22px;
 	padding-bottom: 6px;
@@ -29,10 +46,15 @@
 	color: $primaryTitleColor;
 	background-color: $secondaryBackgrounColor;
 
-	border-radius: 4px;	
 	transition: $primaryTransitionColBg;
 }
 
+	&__item {
+		@media screen and (max-width:767px) {
+			margin-bottom: 15px;
+			border-radius: 4px;	
+		}
+	}
 
 	&__item:not(:last-child) {
 	margin-right: 8px;

@@ -1,9 +1,7 @@
 .header {
 	border-bottom: 1px solid #ececec;
 
-	@media screen and (max-width: 767px) {
-		position: relative;
-	}
+	
 
 	@media screen and (min-width: 768px) {
 		.flexbox {
@@ -11,31 +9,26 @@
 			align-items: center;
 		}
 	}
+	&__nav {
+	 display: flex;
+  	align-items: center;
+ 	 justify-content: space-between;
+ 	 flex-grow: 1;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
 }
 /* =====================Nav-Header===================== */
 
 
 .site-nav {
-	@media screen and (max-width: 767px) {
-		margin-bottom: 60px;
-	}
-
-	@media screen and (min-width: 768px) {
-		display: flex;
-		align-items: center;
-	}
-
-	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		margin-right: 86px;
-	}
-
-	@media screen and (min-width: 1200px) {
-		margin-right: 305px;
-	}
+	margin-left: 93px;
 	
 	&__list {
 		@media screen and (max-width: 767px) {
 		text-align: center;
+		
 	}
 	@media screen and (min-width: 768px) {
 		display: flex;
@@ -43,7 +36,14 @@
 	}
  
     &__link {
-		
+		@media screen and (max-width: 768px) {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 47px;
+			text-align: center;
+			letter-spacing: 0.02em;
+		}
 	
 	margin-bottom: 0;
 	font-weight: 500;
