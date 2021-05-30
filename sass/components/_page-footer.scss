@@ -1,6 +1,7 @@
 
 
 .flexbox {
+		
 	@media screen and (min-width: 1200px) {
 		display: flex;
 		align-items: baseline;
@@ -8,13 +9,12 @@
 }
 
 .footer {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding: 60px 0;
 	background-color: var(--footer-bg-color);
 
 	&__flexbox.box {
-
-		@media screen and (min-width: 768px) {
+		
+	@media screen and (min-width: 768px) {
 		display: flex;
 	}
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
