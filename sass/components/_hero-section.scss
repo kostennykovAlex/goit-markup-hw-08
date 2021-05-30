@@ -60,18 +60,36 @@
     
 	
 	&__title {	
+		margin: 0 auto 30px auto;
+		text-transform: uppercase;
+
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 26px;
+		line-height: 1.163;
+/* or 162% */
+
+		text-align: center;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+
+	color: $basicWhiteColor;
+	max-width: 360px;
+
+	@media screen and (min-width: 1200px) {
+		max-width: 696px;
+
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.363;
+	}
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 0;
 	margin-bottom: 30px;
-	max-width: 696px;
-
-
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.363;
 
 	/* or 136% */
 	letter-spacing: 0.06em;
