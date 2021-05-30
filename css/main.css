@@ -360,6 +360,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1030,8 +1034,16 @@ header .container {
 }
 
 /* ==================================Advantages-features==================== */
-.advantages {
-  padding-top: 94px;
+@media screen and (max-width: 1199px) {
+  .advantages {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .advantages {
+    padding: 94px 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1047,7 +1059,6 @@ header .container {
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .advantages__list {
     margin: -15px;
-    margin-bottom: 60px;
   }
 }
 
@@ -1378,9 +1389,17 @@ header .container {
   fill: currentColor;
 }
 
-.customers {
-  padding-top: 95px;
-  padding-bottom: 91px;
+@media screen and (min-width: 768px) {
+  .customers {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .customers {
+    padding-top: 95px;
+    padding-bottom: 91px;
+  }
 }
 
 .customers__title {
@@ -2242,6 +2261,12 @@ header .container {
 .filters {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1199px) {
+  .filters {
+    padding-top: 60px;
+  }
 }
 
 .filters__list {
